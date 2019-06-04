@@ -2,10 +2,8 @@ public class ElectricShaver {
 
     private static int howMuchShavers = 0;
 
-
     protected boolean hasWirelessCharghing;
     protected boolean isWaterproof;
-
 
     private int power;
     private String model;
@@ -15,101 +13,89 @@ public class ElectricShaver {
     private String company;
 
 
+    public ElectricShaver() {
 
-
-
-
-
-
-    ElectricShaver(){
-
-        this(2, "Company", 3, 10, "Model", true, false);
+        this(3, "Braun", 1, 0, "6", false, false);
 
     }
 
+    ElectricShaver(int workTime, String company, int changhingNozzles) {
 
-    ElectricShaver(int WorkTime, String Company, int ChangingNozzles, int Power, String Model, boolean HasWirelessCharghing, boolean Iswaterproof){
+        this(workTime, company, changhingNozzles, 10, "model", false, false);
 
-        this.workTime = WorkTime;
-        this.company = Company;
-        this.changingNozzles = ChangingNozzles;
-        this.power = Power;
-        this.model = Model;
+
+    }
+
+    ElectricShaver(int workTime, String company, int changingNozzles, int power, String model, boolean hasWirelessCharghing, boolean iswaterproof) {
+
+        this.workTime = workTime;
+        this.company = company;
+        this.changingNozzles = changingNozzles;
+        this.power = power;
+        this.model = model;
         this.hasWirelessCharghing = true;
         this.isWaterproof = false;
         howMuchShavers++;
 
     }
 
-    ElectricShaver(int WorkTime, String Company, int ChanghingNozzles){
 
-        this(WorkTime, Company, ChanghingNozzles, 10, "model", true, false);
+    public void setWorkTime(int workTime) {
 
-
+        this.workTime = workTime;
     }
 
-
-
-
-    public void setWorkTime(int WorkTime){
-
-        this.workTime = WorkTime;
-    }
-
-    public int getWorkTime(){
+    public int getworkTime() {
 
         return workTime;
     }
 
-    public void setCompany (String Company){
+    public void setCompany(String company) {
 
-        this.company = Company;
+        this.company = company;
     }
 
-    public String getCompany(){
+    public String getCompany() {
 
         return company;
     }
 
-    public void setChangingNozzles (int ChanghingNozzles){
+    public void setChangingNozzles(int changhingNozzles) {
 
-        this.changingNozzles = ChanghingNozzles;
+        this.changingNozzles = changhingNozzles;
     }
 
-    public int getChangingNozzles(){
+    public int getChangingNozzles() {
 
         return changingNozzles;
     }
 
 
+    public void setPower(int power) {
 
-    public void setPower(int Power){
-
-        this.power = Power;
+        this.power = power;
 
 
     }
 
-    public int getPower(){
+    public int getPower() {
 
         return power;
     }
 
 
+    public void setModel(String model) {
 
-    public void setModel( String Model){
-
-        this.model = Model;
+        this.model = model;
     }
 
-    public String getModel(){
+    public String getModel() {
 
         return model;
     }
 
 
-    public String toString(){
-
+    public String toString() {
 
 
         return "Working Time: " + workTime
@@ -117,35 +103,34 @@ public class ElectricShaver {
                 + ", Changhing Nozzles: "
                 + changingNozzles + ", Power: "
                 + power + ", Model: "
-                + model + ", Has Wireless Charge: "+ hasWirelessCharghing
+                + model + ", Has Wireless Charge: " + hasWirelessCharghing
                 + ", Is Waterproof " + isWaterproof;
     }
 
 
-    public void printSvaluse(){
+    public void printSvaluse() {
         printStaticValue();
     }
 
 
-     static void printStaticValue(){
+    static void printStaticValue() {
 
         System.out.println("Number Of Shavers:" + howMuchShavers);
     }
 
 
-    public  void resetValues(int WorkTime, String Company, int ChanghingNozzles, int Power, String Model, boolean HasWirelessCharghing, boolean Iswaterproof){
+    public void resetValues(int workTime, String company, int changhingNozzles, int power, String model, boolean hasWirelessCharghing, boolean iswaterproof) {
 
-        this.workTime = WorkTime;
-        this.company = Company;
-        this.changingNozzles = ChanghingNozzles;
-        this.power = Power;
-        this.model = Model;
-        this.hasWirelessCharghing = HasWirelessCharghing;
-        this.isWaterproof = Iswaterproof;
+        this.workTime = workTime;
+        this.company = company;
+        this.changingNozzles = changhingNozzles;
+        this.power = power;
+        this.model = model;
+        this.hasWirelessCharghing = hasWirelessCharghing;
+        this.isWaterproof = iswaterproof;
 
 
     }
-
 
 
 }
